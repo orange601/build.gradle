@@ -23,9 +23,6 @@ ex) ext
 ````groovy
 ext {
     springVersion = "3.1.0.RELEASE"
-    emailNotification = "build@master.org"
-
-
 }
 ````
 
