@@ -24,7 +24,7 @@ ext {
 출처: http://blog-joowon.tistory.com/2 [Joowon's blog]
 
 # sourceSets
-##### Package 구조를 구성할때 사용
+##### -Package 구조를 구성할때 사용
 
 ex) 
 + src/main/java => src/java: 3단계의 디렉토리를 2단계로 줄임.
