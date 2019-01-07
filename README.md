@@ -46,3 +46,12 @@ sourceSets {
     }
 }
 ````
+
+# profile
+##### 로컬과 운영 설정파일을 분기한다. (dependency도 분기함)
+````grooby
+if (!project.hasProperty('profile') || !profile) { 
+	ext.profile = 'dev' 
+	println "${ext.profile} build start..."
+}
+````
