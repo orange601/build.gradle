@@ -58,3 +58,36 @@ if (!project.hasProperty('profile') || !profile) {
 	println "${ext.profile} build start..."
 }
 ````
+
+# 이클립스 환경설정
+````grooby
+eclipse {
+    classpath {
+        downloadSources = true
+        defaultOutputDir = file("WebContent/WEB-INF/classes" )  // 컴파일 후 class 파일이 저장되는 폴더.
+      
+        // src/test/java, src/test/resources의 output 디렉토리를 지정한다.
+        file {
+            whenMerged { cp ->
+                cp.entries.findAll{ entry ->
+                    entry.kind == 'src' && entry.path.startsWith( "src/test/")
+                }*.output = "build/test-classes"
+            }
+        }
+    }
+    // workspace/{project}/.settings 폴더를 설정한다.
+    wtp {
+        // .settings 폴더의 org.eclipse.wst.common.component 파일을 설정한다.
+        component {
+            //contextPath = project.name // 원하는 contextPath 지정. 단, 빈 컨텍스트패스는 "/" 로 지정
+            contextPath = "" // 원하는 contextPath 지정. 단, 빈 컨텍스트패스는 "/" 로 지정
+        }
+        // .settings 폴더의 org.eclipse.wst.common.project.facet.core.xml 파일을 설정한다.
+        facet {
+            facet name: "jst.web" , version: "2.5" // Servlet Spec Version 지정
+            facet name: "jst.java" , version: "1.6" // Java Version 지정, 1.7 ...
+            facet name: 'wst.jsdt.web' , version: '1.0'   // Javascript 지정, 1.0
+        }
+    }
+}
+````
