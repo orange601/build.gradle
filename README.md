@@ -2,7 +2,7 @@
 Gradle을 위한 Groovy문법
 
 # 변수
-로컬에서만 접근이 가능하다.
+def: 로컬에서만 접근이 가능하다.
 ````groovy
 def versions = [
 	servlet: "4.0.1",
@@ -15,7 +15,7 @@ def versions = [
 	springfox: "2.9.2"
 ]
 ````
-프로젝트 전체와 서브 프로젝트에서도 접근이 가능하다.
+ext: 프로젝트 전체와 서브 프로젝트에서도 접근이 가능하다.
 ````groovy
 ext {
     springVersion = "3.1.0.RELEASE"
