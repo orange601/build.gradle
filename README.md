@@ -24,7 +24,12 @@ ext {
 출처: http://blog-joowon.tistory.com/2 [Joowon's blog]
 
 # sourceSets
-- Package를 구조를 구성할때 사용
+- Package 구조를 구성할때 사용
+
+ex) 
++ src/main/java => src/java: 3단계의 디렉토리를 2단계로 줄임.
++ src/main/resources => src/resouces: 테스트 소스에서 사용할 자원이 없을 것으로 판단해 src/resources 하나로 통합
++ src/test/java => src/test: 3단계의 디렉토리를 2단계로 줄임.
 ````groovy
 sourceSets {
     main {
