@@ -49,7 +49,7 @@ sourceSets {
 
 # profile
 #### profile이란? 
-- 미니 프로젝트가 아닌 이상 대부분의 기업용 서비스는 개발(dev), 테스트(test), 운영(prod) 등으로 구동 환경을 세분화하여 서비스를 관리한다. 이런 식별 키워드를 바로 Profile이라고 부른다. 
+- 미니 프로젝트가 아닌 이상 대부분의 기업용 서비스는 개발(dev), 테스트(test), 운영(prod) 등으로 구동 환경을 세분화하여 서비스를 관리한다. 이런 식별 키워드를 바로 Profile이라고 부른다. 출처: http://jsonobject.tistory.com/220
 ##### profile을 사용하는 이유?
 - 로컬과 운영 설정파일을 분기한다. (dependency도 분기함)
 ````grooby
