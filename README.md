@@ -100,3 +100,17 @@ eclipse {
 ````
 출처:https://hermeslog.tistory.com/m/270?category=600924
 
+
+# Gradle Wrapper
+##### gradle 을 자동으로 설치해 준다
+- gradle wrapper 란 녀석을 이용하면, gradle 을 자동으로 설치해 준다. 
+이 gradle wrapper(gradlew) 는 windows batch file 또는 shell script 이다. 
+이 script 안에 gradle version 이 명시되어 있는데, 명시된 버전을 다운로드 해서 설치 해 준다.
+그렇기 때문에 gradle wrapper 를 통해 gradle wrapper 를 만들어 놓으면, 이 project 를 다른 곳에 옮겨가서 다시 build 하기 편리하다.
+build.gradle 에 아래처럼 적어놓으면 gradle wrapper 를 이용하게 된다. gradleVersion 이 이용하려는 gradle 의 version 이 된다.
+
+````gradle
+task wrapper(type: Wrapper) {
+  gradleVersion = '1.0-milestone-3'
+}
+````
