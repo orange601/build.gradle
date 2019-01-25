@@ -23,6 +23,11 @@ ext {
 ````
 출처: http://blog-joowon.tistory.com/2 [Joowon's blog]
 
+
+# buildscript
+##### buildscript는 build.gradle 자체를 실행하기 위한 
+
+
 # sourceSets
 ##### Package 구조를 구성할때 사용
 
@@ -94,3 +99,4 @@ eclipse {
 }
 ````
 출처:https://hermeslog.tistory.com/m/270?category=600924
+
