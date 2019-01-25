@@ -114,3 +114,4 @@ task wrapper(type: Wrapper) {
   gradleVersion = '1.0-milestone-3'
 }
 ````
+출처 : http://i5on9i.blogspot.com/2013/09/gradle.html
