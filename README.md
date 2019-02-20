@@ -118,7 +118,7 @@ task wrapper(type: Wrapper) {
 
 # Create a Jar file with dependencies
 ##### jar파일에 라이브러리 같이 추가하기
-- fatjar를 사용할 필요가 없다.
+- fatjar를 사용할 필요가 없다. from 부분을 추가하면 된다.
 ````gradle
 version = '1.0.0'
 jar {
@@ -131,5 +131,6 @@ jar {
                    'Implementation-Version': version
     }
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+}
 ````
 출처:https://junho85.pe.kr/380
