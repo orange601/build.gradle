@@ -115,3 +115,21 @@ task wrapper(type: Wrapper) {
 }
 ````
 출처 : http://i5on9i.blogspot.com/2013/09/gradle.html
+
+# Create a Jar file with dependencies
+##### jar파일에 라이브러리 같이 추가하기
+- fatjar를 사용할 필요가 없다.
+````gradle
+version = '1.0.0'
+jar {
+    baseName = 'myapp'
+    version = version
+    archiveName = 'myapp.jar'
+    manifest {
+        attributes 'Main-Class': 'kr.pe.junho85.MyApp',
+                   'Implementation-Title': 'myapp',
+                   'Implementation-Version': version
+    }
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+````
+출처:https://junho85.pe.kr/380
