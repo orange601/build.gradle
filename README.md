@@ -1,6 +1,29 @@
 # build.gradle
 Gradle을 위한 Groovy문법
 
+# dependency
+
+![img](https://user-images.githubusercontent.com/24876345/96805917-b1071200-144d-11eb-90db-4523c2f42335.png)
+
+##### Compile
+A라는 모듈을 수정하게 되면, 이 모듈을 직접 혹은 간접 의존하고 있는 B와 C는 모두 재빌드 되어야 한다.
+ 
+
+##### Implementation
+A라는 모듈을 수정하게 되면, 이 모듈을 직접 의존하고 있는 B만 재빌드한다.
+* 맥락에서 재빌드(rebuild)라는 표현을 썼지만 recompile이랑 동일한 표현으로 사용되었다.  
+그런데, Gradle 3.0부터는 Compile이 deprecated되었다고 한다.
+(참고로 현재 버전이 4.8.1부터 6.2까지 documentation이 제공되고 있다)
+
+| 3.0 이전 | 3.0 이후 | 비고 |
+|---|:---:|---:|
+| `compile ` | implementation |  |
+| `testCompile` | testImplmentation |  |
+| `debugCompile` | debugImplementation |  |
+| `androidTestCompile` | androidTestImplementation |  |
+
+
+
 # 변수
 def: 로컬에서만 접근이 가능하다.
 ````gradle
