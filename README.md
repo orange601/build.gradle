@@ -23,6 +23,12 @@ Gradle 3.0부터는 Compile이 deprecated되었다고 한다.
 | `androidTestCompile` | androidTestImplementation |  |
 
 
+## providedCompile
+compile시에는 필요하지만, 배포시에는 제외될 dependency를 설정한다. (war plugin이 설정된 경우에만 사용 가능하다)
+
+## providedRuntime
+runtime시에만 필요하고, 실행환경에서 제공되는 dependency를 설정한다. (war plugin이 설정된 경우에만 사용 가능하다)
+
 
 # 변수
 def: 로컬에서만 접근이 가능하다.
