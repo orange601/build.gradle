@@ -5,11 +5,11 @@ Gradle을 위한 Groovy문법
 
 ![img](https://user-images.githubusercontent.com/24876345/96805917-b1071200-144d-11eb-90db-4523c2f42335.png)
 
-##### Compile
+## Compile
 A라는 모듈을 수정하게 되면, 이 모듈을 직접 혹은 간접 의존하고 있는 B와 C는 모두 재빌드 되어야 한다.
  
 
-##### Implementation
+## Implementation
 A라는 모듈을 수정하게 되면, 이 모듈을 직접 의존하고 있는 B만 재빌드한다.
 Gradle 3.0부터는 Compile이 deprecated되었다고 한다.
 
