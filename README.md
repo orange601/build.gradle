@@ -7,13 +7,13 @@ Gradle을 위한 Groovy문법
 
 ## Compile
 A라는 모듈을 수정하게 되면, 이 모듈을 직접 혹은 간접 의존하고 있는 B와 C는 모두 재빌드 되어야 한다.
- 
-
-## Implementation
-A라는 모듈을 수정하게 되면, 이 모듈을 직접 의존하고 있는 B만 재빌드한다.
 Gradle 3.0부터는 Compile이 deprecated되었다고 한다.
 
 ~~(참고로 현재 버전이 4.8.1부터 6.2까지 documentation이 제공되고 있다)~~
+
+## Implementation
+A라는 모듈을 수정하게 되면, 이 모듈을 직접 의존하고 있는 B만 재빌드한다.
+
 
 | 3.0 이전 | 3.0 이후 | 비고 |
 |---|:---:|---:|
@@ -28,6 +28,18 @@ compile시에는 필요하지만, 배포시에는 제외될 dependency를 설정
 
 ## providedRuntime
 runtime시에만 필요하고, 실행환경에서 제공되는 dependency를 설정한다. (war plugin이 설정된 경우에만 사용 가능하다)
+
+
+## compile
+compile 시점에 필요한 디펜던시 라이브러리들을 compile로 정의
+
+## runtime
+런타임 시에 참조할 라이브러리를 정의합니다. 기본적으로 compile 라이브러리를 포함
+
+## testCompile
+
+## compileOnly
+컴파일 시점에만 사용하고 런타임에는 필요없는 라이브러리를 정의
 
 
 # 변수
