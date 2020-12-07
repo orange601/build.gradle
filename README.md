@@ -27,8 +27,7 @@ A라는 모듈을 수정하게 되면, 이 모듈을 직접 의존하고 있는 
 compile시에는 필요하지만, 배포시에는 제외될 dependency를 설정한다. (war plugin이 설정된 경우에만 사용 가능하다)
 
 ## providedRuntime
-runtime시에만 필요하고, 실행환경에서 제공되는 dependency를 설정한다. (war plugin이 설정된 경우에만 사용 가능하다)
-
+runtime시에만 필요하고 배포시에는 제외될 dependency를 설정 (war plugin이 설정된 경우에만 사용 가능하다)  
 
 ## compile
 compile 시점에 필요한 디펜던시 라이브러리들을 compile로 정의
