@@ -174,3 +174,6 @@ jar {
 }
 ````
 출처:https://junho85.pe.kr/380
+
+# buildscript
+SpringBoot Version 정보, Maven Repository 정보, Dependency 모듈을 지정하여 스프링 부트 플러그인을 사용할 수 있는 기본 바탕을 정의합니다.
