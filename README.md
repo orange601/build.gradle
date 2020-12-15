@@ -176,7 +176,8 @@ jar {
 출처:https://junho85.pe.kr/380
 
 # buildscript
-SpringBoot Version 정보, Maven Repository 정보, Dependency 모듈을 지정하여 스프링 부트 플러그인을 사용할 수 있는 기본 바탕을 정의한다.
+SpringBoot Version 정보, Maven Repository 정보, Dependency 모듈을 지정하여 스프링 부트 플러그인을 사용할 수 있는 기본 바탕을 정의한다.  
+buildscript는 Gradle 빌드 스크립트 자체를 위한 의존성이나 변수, Task, Plugin 등을 지정할 수 있다. 서드파티 플러그인이나 Task, Class 등을 빌드 스크립트 내에서 추가로 사용하려면 해당 의존성을 추가해줘야 한다. build.gradle 자체를 실행하기 위한 설정이라 보면 된다.
 
 # apply
 - apply plugin: 'java' → java용 웹 프로젝트를 생성한다. sourceCompatibility = '1.8' 호환 버전을 지정하여 java 웹 프로젝트에서 사용할 java를 명시한다.
