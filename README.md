@@ -143,6 +143,8 @@ eclipse {
 
 # Gradle Wrapper
 ##### gradle 을 자동으로 설치해 준다
+- 이미 존재하는 프로젝트를 새로운 환경에 설치할때 별도의 설치나 설정과정없이 곧 바로 빌드할 수 있게 하기 위함(Java나 Gradle도 설치할 필요가 없음. 
+또한 로컬에 설치된 Gradle 또는 Java의 버전도 신경쓸 필요가 없음. 따라서 항상 Wrapper를 사용할 것을 권장.)
 - gradle wrapper 란 녀석을 이용하면, gradle 을 자동으로 설치해 준다. 
 이 gradle wrapper(gradlew) 는 windows batch file 또는 shell script 이다. 
 이 script 안에 gradle version 이 명시되어 있는데, 명시된 버전을 다운로드 해서 설치 해 준다.
