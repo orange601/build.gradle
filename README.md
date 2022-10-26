@@ -1,5 +1,34 @@
 # build.gradle
-Gradle을 위한 Groovy문법
+Gradle 사용법
+
+## plugins ##
+````groovy
+// Using Legacy plugin application:
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath "org.springframework.boot:spring-boot-gradle-plugin:2.0.1.RELEASE"
+  }
+}
+
+apply plugin: "org.springframework.boot"
+````
+
+````groovy
+// Using the plugins DSL
+plugins {
+  id "org.springframework.boot" version "2.7.5"
+}
+````
+[출처](https://plugins.gradle.org/plugin/org.springframework.boot)
+
+## apply ##
+- apply plugin: 'java' → java용 웹 프로젝트를 생성한다. sourceCompatibility = '1.8' 호환 버전을 지정하여 java 웹 프로젝트에서 사용할 java를 명시한다.
+- apply plugin: 'io.spring.dependency-management' → Spring IO Platform의 Gradle Plugin인 dependency-management를 사용한다. 스프링 부트 1.x에서는 디폴트로 사용되었지만 2.x에서는 명시적으로 선언해 주어야 한다.
 
 # dependency
 
