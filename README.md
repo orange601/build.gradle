@@ -2,6 +2,15 @@
 Gradle 사용법
 
 ## plugins ##
+- 기본적으로 프로젝트 전체에 적용이고 일부 서브 프로젝트에만 적용하기 위해서 apply false를 선언해 제어하고 사용시 apply plugin으로 명시해 주면 된다.
+
+#### Applying external plugins with same version to subprojects ####
+> If you have a multi-project build, you probably want to apply plugins to some or all of the subprojects in your build, but not to the root project. 
+> The default behavior of the plugins {} block is to immediately resolve and apply the plugins. 
+> But, you can use the apply false syntax to tell Gradle not to apply the plugin to the current project and then use the plugins {} block without the version in subprojects' build scripts:
+
+[출처](https://docs.gradle.org/current/userguide/plugins.html#sec:subprojects_plugins_dsl)
+
 ````groovy
 // Using Legacy plugin application:
 buildscript {
