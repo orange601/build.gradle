@@ -2,7 +2,9 @@
 Gradle 사용법
 
 ## plugins ##
-
+- 플러그인을 적용하는 최신 방법이다.
+- 예) io.spring.dependency-management 플러그인을 사용하고 싶다면 아래 사이트에 접속해서 플러그인 존재여부 확인 후 사용가능하다.
+- https://plugins.gradle.org/search?term=
 
 
 - 기본적으로 프로젝트 전체에 적용이고 일부 서브 프로젝트에만 적용하기 위해서 apply false를 선언해 제어하고 사용시 apply plugin으로 명시해 주면 된다.
