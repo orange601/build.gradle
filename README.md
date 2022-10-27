@@ -108,9 +108,10 @@ jar {
 - 그레이들은 이런 방식을 **Cross project configuration** 이라고 한다.
 
 #### cross project configuration 문제점 ###
-> 서브프로젝트의 빌드 스크립트만 봐서는 부모 프로젝트에서 빌드 로직이 주입된다는 것이 분명하게 드러나지 않기 때문에 로직을 파악하기 힘들다.
-
+> 서브프로젝트의 빌드 스크립트만 봐서는 부모 프로젝트에서 빌드 로직이 주입된다는 것이 분명하게 드러나지 않기 때문에 로직을 파악하기 힘들다.   
 > 설정 시점에 프로젝트 간에 커플링이 생기기 때문에 configuration-on-demand와 같은 최적화가 제대로 작동하지 않는다.
+
+#### 권장 방식인 Convention Plugins 방식을 사용 ####
 
 ## build.gradle 대신 subproject 이름으로 gradle 파일 구성 ##
 - 멀티 모듈 프로젝트를 구성하면 지나치게 많은 build.gradle 파일 때문에 혼란스러워진다.
