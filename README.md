@@ -1,6 +1,8 @@
 # build.gradle
 Gradle 사용법
 
+[Gradle 공식사이트](https://docs.gradle.org/current/userguide/userguide.html)
+
 ## Types of plugins ##
 - Binary plugins
 	+ Plugin 인터페이스를 구현하여 프로그래밍 방식으로 작성하거나 Gradle의 DSL 언어 중 하나를 사용하여 선언적으로 작성할 수 있다.
