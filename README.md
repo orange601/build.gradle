@@ -61,9 +61,20 @@ plugins {
 ````
 [출처](https://plugins.gradle.org/plugin/org.springframework.boot)
 
+## build.gradle 대신 subproject 이름으로 gradle 파일 구성 ##
+- 멀티 모듈 프로젝트를 구성하면 지나치게 많은 build.gradle 파일 때문에 혼란스러워진다.
+- 아래와 같이 settings.gradle 에 설정하여 각각의 sub module 들에 대한 설정 파일을 submodule-name.gradle로 변경할 수 있다
+````groovy
+rootProject.children.each {project ->
+    project.buildFileName = "${project.name}.gradle"
+}
+````
+[출처-권남](https://kwonnam.pe.kr/wiki/gradle/multiproject)
+
 ## apply ##
 - apply plugin: 'java' → java용 웹 프로젝트를 생성한다. sourceCompatibility = '1.8' 호환 버전을 지정하여 java 웹 프로젝트에서 사용할 java를 명시한다.
 - apply plugin: 'io.spring.dependency-management' → Spring IO Platform의 Gradle Plugin인 dependency-management를 사용한다. 스프링 부트 1.x에서는 디폴트로 사용되었지만 2.x에서는 명시적으로 선언해 주어야 한다.
+
 
 # dependency
 
