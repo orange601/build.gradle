@@ -1,4 +1,4 @@
-# build.gradle
+# Gradle
 [Gradle 공식사이트](https://docs.gradle.org/current/userguide/userguide.html)
 
 ## Gradle Wrapper ##
