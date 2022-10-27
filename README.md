@@ -68,6 +68,38 @@ plugins {
 ````
 [출처](https://plugins.gradle.org/plugin/org.springframework.boot)
 
+
+## Plain jar vs Executable jar ##
+- 스프링 부트 gradle 플러그인 2.5 버전부터 gradle 빌드 시 JAR 파일이 2개 생성된다.
+- 별도의 설정을 하지 않았을 때 하나는 [ 프로젝트이름-버전.jar ], 다른 하나는 [ 프로젝트 이름-버전-plain.jar ]이라는 이름을 가진다.
+
+### Plain Archive ##
+- -plain이 붙은 jar 파일을 plain archive라고 한다.
+- plain archive는 gradle의 "jar" task로 생성된다.
+- plain archive는 어플리케이션 실행에 필요한 모든 의존성을 포함하지 않고, 작성된 소스코드의 클래스 파일과 리소스 파일만 포함한다.
+- 이렇게 생성된 jar 파일을 "plain jar", "standard jar", "thin jar"라고 한다.
+- 모든 의존성이 존재하는 게 아니기 때문에 plain jar는 "java -jar" 명령어로 실행 시 에러가 발생한다.
+
+### Executable Archive ##
+- -plain 키워드가 없는 jar 파일은 executable archive라고 하며, 어플리케이션 실행에 필요한 모든 의존성을 함께 빌드한다.
+- executable acrchive는 gradle의 bootJar task로 생성된다.
+- 이렇게 생성된 executable jar는 **fat jar**라고도 한다.
+- 모든 의존성을 포함하기 때문에 java -jar 명령어를 통해 실행이 가능하다.
+
+#### 빌드 시 plain jar 생성하지 않도록 설정하기 ####
+
+````gradle
+plugins {
+	...
+}
+
+
+jar {
+	enabled = false
+}
+
+````
+
 ## Multi Project ##
 - 프로젝트를 구성하다보면 공통된 기능과 코드를 하나의 모듈로 몰아놓고 역할에 따라서 각기 다른 모듈에서 참조하여 사용하는 방식을 사용하게 된다. 
 - 이는 멀티 프로젝트의 형태를 띄게 된다(사용하는 IDE에 따라서 멀티 프로젝트 혹은 멀티 모듈이라고 부르게 되지만 개념은 동일하다)
@@ -83,10 +115,6 @@ rootProject.children.each {project ->
 }
 ````
 [출처-권남](https://kwonnam.pe.kr/wiki/gradle/multiproject)
-
-## apply ##
-- apply plugin: 'java' → java용 웹 프로젝트를 생성한다. sourceCompatibility = '1.8' 호환 버전을 지정하여 java 웹 프로젝트에서 사용할 java를 명시한다.
-- apply plugin: 'io.spring.dependency-management' → Spring IO Platform의 Gradle Plugin인 dependency-management를 사용한다. 스프링 부트 1.x에서는 디폴트로 사용되었지만 2.x에서는 명시적으로 선언해 주어야 한다.
 
 
 # dependency
@@ -271,7 +299,3 @@ jar {
 - dependencies와 다른점은 dependencies는 명시된 상황에서만 의존 라이브러리를 참조한다.
 - ringBoot Version 정보, Maven Repository 정보, Dependency 모듈을 지정하여 스프링 부트 플러그인을 사용할 수 있는 기본 바탕을 정의한다.  
 - build.gradle 자체를 실행하기 위한 설정이라 보면 된다.
-
-# apply
-- apply plugin: 'java' → java용 웹 프로젝트를 생성한다. sourceCompatibility = '1.8' 호환 버전을 지정하여 java 웹 프로젝트에서 사용할 java를 명시한다.
-- apply plugin: 'io.spring.dependency-management' → Spring IO Platform의 Gradle Plugin인 dependency-management를 사용한다. 스프링 부트 1.x에서는 디폴트로 사용되었지만 2.x에서는 명시적으로 선언해 주어야 한다.
