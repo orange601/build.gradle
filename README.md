@@ -109,6 +109,7 @@ jar {
 
 #### cross project configuration 문제점 ###
 > 서브프로젝트의 빌드 스크립트만 봐서는 부모 프로젝트에서 빌드 로직이 주입된다는 것이 분명하게 드러나지 않기 때문에 로직을 파악하기 힘들다.
+
 > 설정 시점에 프로젝트 간에 커플링이 생기기 때문에 configuration-on-demand와 같은 최적화가 제대로 작동하지 않는다.
 
 ## build.gradle 대신 subproject 이름으로 gradle 파일 구성 ##
