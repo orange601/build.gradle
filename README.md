@@ -2,6 +2,7 @@
 [Gradle 공식사이트](https://docs.gradle.org/current/userguide/userguide.html)
 
 ## Gradle Wrapper ##
+- JAVA 버전없이(설치돼있어야함), Gradle 설치없이 배포
 - Gradle을 각 개발자나 CI 서버에 깔지 않고, 프로젝트에 함께 포함시켜 배포할 수 있는 방법을 제공
 - Wrapper는 선언 된 버전의 Gradle을 호출하여 필요한 경우 미리 다운로드하는 스크립트다. 
 - 결과적으로 수동 설치 프로세스를 수행하지 않고도 Gradle 프로젝트를 신속하게 시작할 수 있다.
