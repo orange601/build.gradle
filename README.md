@@ -181,10 +181,6 @@ ext {
 출처: http://blog-joowon.tistory.com/2 [Joowon's blog]
 
 
-# buildscript
-##### buildscript는 build.gradle 자체를 실행하기 위한 
-
-
 # sourceSets
 ##### Package 구조를 구성할때 사용
 
