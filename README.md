@@ -1,6 +1,4 @@
 # build.gradle
-Gradle 사용법
-
 [Gradle 공식사이트](https://docs.gradle.org/current/userguide/userguide.html)
 
 ## Types of plugins ##
