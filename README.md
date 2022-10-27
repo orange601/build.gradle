@@ -78,13 +78,14 @@ plugins {
 - plain archive는 gradle의 jar task로 생성된다.
 - plain archive는 어플리케이션 실행에 필요한 모든 의존성을 포함하지 않고, 작성된 소스코드의 클래스 파일과 리소스 파일만 포함한다.
 - 이렇게 생성된 jar 파일을 plain jar, standard jar, thin jar라고 한다.
-- 모든 의존성이 존재하는 게 아니기 때문에 plain jar는 java -jar 명령어로 실행 시 에러가 발생한다.
+- 모든 의존성이 존재하는 게 아니기 때문에 plain jar는 java -jar 명령어로 실행 시 에러가 발생한다. (Manifest 속성이 없다는 오류)
 
 ### Executable Archive ##
 - -plain 키워드가 없는 jar 파일은 executable archive라고 하며, 어플리케이션 실행에 필요한 모든 의존성을 함께 빌드한다.
 - executable acrchive는 gradle의 bootJar task로 생성된다.
 - 이렇게 생성된 executable jar는 **fat jar**라고도 한다.
 - 모든 의존성을 포함하기 때문에 java -jar 명령어를 통해 실행이 가능하다.
+- **Bootjar에 의해 생성된 jar, 문제 없이 실행된다.**
 
 #### 빌드 시 plain jar 생성하지 않도록 설정하기 ####
 
