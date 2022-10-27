@@ -1,6 +1,12 @@
 # build.gradle
 Gradle 사용법
 
+## Types of plugins ##
+- Binary plugins
+	+ Plugin 인터페이스를 구현하여 프로그래밍 방식으로 작성하거나 Gradle의 DSL 언어 중 하나를 사용하여 선언적으로 작성할 수 있다.
+- Script plugins
+ 	+ 빌드를 추가로 구성하는 추가 빌드 스크립트로, 일반적으로 빌드를 조작하기 위한 선언적 접근법을 구현한다.
+
 ## plugins ##
 - 플러그인을 적용하는 최신 방법이다.
 - 예) io.spring.dependency-management 플러그인을 사용하고 싶다면 아래 사이트에 접속해서 플러그인 존재여부 확인 후 사용가능하다.
