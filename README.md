@@ -16,7 +16,7 @@ $ ./gradlew build
  	+ 빌드를 추가로 구성하는 추가 빌드 스크립트로, 일반적으로 빌드를 조작하기 위한 선언적 접근법을 구현한다.
 
 ## plugins ##
-- 플러그인을 적용하는 최신 방법이다.
+- 플러그인을 적용하는 최신 방법(v7.5.1)이다.
 - 예) io.spring.dependency-management 플러그인을 사용하고 싶다면 아래 사이트에 접속해서 플러그인 존재여부 확인 후 사용가능하다.
 - https://plugins.gradle.org/search?term=
 
