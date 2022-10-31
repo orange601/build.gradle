@@ -1,8 +1,44 @@
 # Gradle
 [Gradle 공식사이트](https://docs.gradle.org/current/userguide/userguide.html)
 
-## buildSrc STS 생성 ##
-1. 
+## buildSrc 멀티프로젝트 ##
+
+#### STS에서 멀티프로젝트 생성 ###
+
+1. Spring Starter Project 혹은 New > project > Gradle > Gradle Project 프로젝트를 생성한다.
+
+2. Project Explorer 창을 열고 시작한다.
+	- 멀티프로젝트를 하나의 프로젝트 안에서 보여주기때문에 관리가 편하다
+	- 기본적으로 프로젝트 관리는 Package Explorer창 에서 관리하는데 Window > Show view > Project Explorer 창을 열고 시작한다.
+	![2022-10-31 15 50 48](https://user-images.githubusercontent.com/24876345/198948572-c811ec61-4d7f-4390-be64-1b91a141e302.png)
+
+3. build.gradle 작성
+	````gradle
+	plugins {
+		id 'java'
+	}
+
+
+	subprojects {
+		apply plugin: 'java'
+		    task initSourceFolders {
+		    sourceSets*.java.srcDirs*.each {
+			if( !it.exists() ) {
+			    it.mkdirs()
+			}
+		    }
+
+		    sourceSets*.resources.srcDirs*.each {
+			if( !it.exists() ) {
+			    it.mkdirs()
+			}
+		    }
+		}
+	}
+	````
+
+4. buildSrc 폴더 생성
+
 
 ## Gradle Wrapper ##
 - JAVA 버전상관없이(설치돼있어야함), Gradle 설치없이 빌드가 가능하다.
