@@ -45,7 +45,7 @@
 	````
 
 4. buildSrc 폴더 생성
-	- 여기서 buildSrc폴더 및 하위 폴더를 다운로드 한뒤 프로젝트에 COPY한다.
+	- 현재 github buildSrc폴더 및 하위 폴더를 다운로드 한뒤 프로젝트에 COPY한다.
 
 5. 그리고 gradle refresh 한다.
 
