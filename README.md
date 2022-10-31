@@ -4,6 +4,9 @@
 ## buildSrc 멀티프로젝트 ##
 
 #### STS에서 멀티프로젝트 생성 ###
+- Tip: STS에서 멀티프로젝트 생성시 settings.gradle 에 include 프로젝트 설정 한 후, build.gradle에서 sourceSets 작성한 다음, gradle refresh해야 하위 프로젝트가 생성된다.
+- gradle refresh 하기전 buildSrc프로젝트 폴더와 build.gradle에 id 'groovy-gradle-plugin' 이 작성되어있어야 한다.
+- 만약 buildSrc 폴더 생성전에 gradle refresh를 통한 멀티프로젝트를 생성했다면 groovy-gradle-plugin 인식이 되질 않는다.
 
 1. Spring Starter Project 혹은 New > project > Gradle > Gradle Project 프로젝트를 생성한다.
 
@@ -13,6 +16,8 @@
 	![2022-10-31 15 50 48](https://user-images.githubusercontent.com/24876345/198948572-c811ec61-4d7f-4390-be64-1b91a141e302.png)
 
 3. build.gradle 작성
+	- sourceSets이 작성돼야 STS에서 프로젝트가 생성된다.
+	
 	````gradle
 	plugins {
 		id 'java'
@@ -38,7 +43,9 @@
 	````
 
 4. buildSrc 폴더 생성
+	- 여기서 buildSrc폴더 및 하위 폴더를 다운로드 한뒤 프로젝트에 COPY한다.
 
+5. 그리고 gradle refresh 한다.
 
 ## Gradle Wrapper ##
 - JAVA 버전상관없이(설치돼있어야함), Gradle 설치없이 빌드가 가능하다.
