@@ -1,6 +1,9 @@
 # Gradle
 [Gradle 공식사이트](https://docs.gradle.org/current/userguide/userguide.html)
 
+## buildSrc STS 생성 ##
+1. 
+
 ## Gradle Wrapper ##
 - JAVA 버전상관없이(설치돼있어야함), Gradle 설치없이 빌드가 가능하다.
 - gradle.build에 Main class가 설정되어 있어야한다.
