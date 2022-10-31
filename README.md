@@ -49,6 +49,10 @@
 
 5. 그리고 gradle refresh 한다.
 
+6. buildSrc 아래에 build 폴더가 자동으로 생성된다.
+
+7. gradle 폴더를 제외한 모든 폴더 삭제(파일은 삭제하지 않는다)
+
 ## Gradle Wrapper ##
 - JAVA 버전상관없이(설치돼있어야함), Gradle 설치없이 빌드가 가능하다.
 - gradle.build에 Main class가 설정되어 있어야한다.
