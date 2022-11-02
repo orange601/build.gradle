@@ -1,6 +1,9 @@
 # Gradle
 [Gradle 공식사이트](https://docs.gradle.org/current/userguide/userguide.html)
 
+## io.spring.dependency-management ##
+- https://github.com/spring-projects/spring-boot/blob/v2.0.8.RELEASE/spring-boot-project/spring-boot-dependencies/pom.xml
+
 ## buildSrc 멀티프로젝트 ##
 
 <!-- 네이버 클라우드에 생성방법 동영상 촬영영상 올려둠 -->
