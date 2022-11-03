@@ -6,7 +6,7 @@
 
 ## buildSrc 멀티프로젝트 ##
 
-<!-- 네이버 클라우드에 생성방법 동영상 촬영영상 올려둠 -->
+<!-- 네이버 클라우드에 생성방법 동영상 촬영영상 올려둠  -->
 
 #### STS에서 멀티프로젝트 생성 ###
 - Tip: STS에서 멀티프로젝트 생성시 settings.gradle 에 include 프로젝트 설정 한 후, build.gradle에서 sourceSets 작성한 다음, gradle refresh해야 하위 프로젝트가 생성된다.
