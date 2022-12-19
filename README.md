@@ -1,6 +1,14 @@
 # Gradle
 [Gradle 공식사이트](https://docs.gradle.org/current/userguide/userguide.html)
 
+### 멀티 프로젝트에서 subprojects {}, allprojects {}의 사용을 더이상 권장하지 않는다. ( gradle 7.4 문서 ) ###
+- Cross project configuration 다음과 같은 문제가 있다.
+- 빌드 로직을 서브프로젝트에 삽입할 수 있지만, 서브프로젝트의 빌드 스크립트를 보더라도 분명하지 않으며 특정 서브프로젝트의 로직을 이해하기 어렵다.
+- Cross project configuration 구성 시 프로젝트 간의 조인도 발생할 수 있으며 configuration-on-demand 같은 최적화가 제대로 작동하지 않을 수 있다.
+- 권장방식인 Convention Plugins 방식을 사용해야 한다.
+- https://docs.gradle.org/7.4/userguide/sharing_build_logic_between_subprojects.html#sec:convention_plugins_vs_cross_configuration
+
+
 ## io.spring.dependency-management ##
 - version 확인
 - https://github.com/spring-gradle-plugins/dependency-management-plugin
