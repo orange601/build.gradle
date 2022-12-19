@@ -15,7 +15,7 @@
 - https://github.com/spring-projects/spring-boot/blob/v2.0.8.RELEASE/spring-boot-project/spring-boot-dependencies/pom.xml
 
 ## buildSrc 멀티프로젝트 ##
-
+https://docs.gradle.org/current/samples/sample_convention_plugins.html
 <!-- 네이버 클라우드에 생성방법 동영상 촬영영상 올려둠  -->
 
 #### STS에서 멀티프로젝트 생성 ###
